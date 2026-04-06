@@ -6,6 +6,10 @@ Real-time chat application built with Node.js, Express, and Socket.IO.
 
 https://node-chat-portfolio.onrender.com
 
+## Source Code
+
+https://github.com/ProKesha/node-chat-portfolio.git
+
 ## Description
 
 This project is a simple multi-room chat application where users can:
