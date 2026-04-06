@@ -80,7 +80,7 @@ function renderRooms() {
       }
 
       try {
-        await fetch(`/api/rooms/${room.id}`, {
+        const response = await fetch(`/api/rooms/${room.id}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -89,8 +89,16 @@ function renderRooms() {
             name: nextName,
           }),
         });
+
+        if (!response.ok) {
+          const payload = await response.json();
+
+          throw new Error(payload.error);
+        }
+
+        setFeedback('Room renamed');
       } catch (error) {
-        setFeedback('Failed to rename room', true);
+        setFeedback(error.message || 'Failed to rename room', true);
       }
     });
 
@@ -216,14 +224,22 @@ roomForm.addEventListener('submit', async event => {
         name,
       }),
     });
+
+    if (!response.ok) {
+      const payload = await response.json();
+
+      throw new Error(payload.error);
+    }
+
     const room = await response.json();
 
     roomInput.value = '';
     socket.emit('join:room', {
       roomId: room.id,
     });
+    setFeedback('Room created');
   } catch (error) {
-    setFeedback('Failed to create room', true);
+    setFeedback(error.message || 'Failed to create room', true);
   }
 });
 

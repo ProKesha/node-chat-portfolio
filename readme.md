@@ -1,10 +1,10 @@
-# Chat (with Node.js)
+# Node Chat Portfolio
 
 Real-time chat application built with Node.js, Express, and Socket.IO.
 
 ## Live Demo
 
-[DEMO LINK](https://node-chat-6yos.onrender.com)
+Add your new Render deployment link here after publish.
 
 ## Description
 
@@ -17,7 +17,7 @@ This project is a simple multi-room chat application where users can:
 - send messages in real time
 - view previous messages in the selected room
 
-The project was created to practice backend and frontend interaction, REST API, and real-time communication with Socket.IO.
+The project was created as a portfolio-ready example of backend and frontend interaction, REST API usage, and real-time communication with Socket.IO.
 
 ## Technologies Used
 
@@ -42,5 +42,4 @@ The project was created to practice backend and frontend interaction, REST API, 
 ```bash
 npm install
 npm start
-
 ```

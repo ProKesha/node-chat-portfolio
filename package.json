@@ -1,7 +1,7 @@
 {
-  "name": "node_chat",
+  "name": "node-chat-portfolio",
   "version": "1.0.0",
-  "description": "Chat using Node.js",
+  "description": "Real-time Node.js chat application for portfolio deployment.",
   "main": "src/index.js",
   "scripts": {
     "init": "mate-scripts init",
@@ -10,10 +10,9 @@
     "format": "prettier --ignore-path .prettierignore --write './src/**/*.{js,ts}'",
     "test:only": "mate-scripts test",
     "update": "mate-scripts update",
-    "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
   },
-  "author": "Mate academy",
+  "author": "ProKesha",
   "license": "GPL-3.0",
   "devDependencies": {
     "@mate-academy/eslint-config": "latest",
