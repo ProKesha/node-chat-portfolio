@@ -35,6 +35,7 @@ function formatTime(isoString) {
 
 function renderUsername() {
   usernameInput.value = state.username;
+
   usernameStatus.textContent = state.username
     ? `Current user: ${state.username}`
     : 'Choose a username to start chatting';
@@ -59,6 +60,7 @@ function renderRooms() {
     joinButton.className = 'room-name-button';
     joinButton.type = 'button';
     joinButton.textContent = room.name;
+
     joinButton.addEventListener('click', () => {
       socket.emit('join:room', {
         roomId: room.id,
